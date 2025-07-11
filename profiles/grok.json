@@ -1,0 +1,5 @@
+{
+  "name": "andy",
+  "model": "groq/llama3-70b-8192",
+  "api": "groq"
+}
