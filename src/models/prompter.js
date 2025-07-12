@@ -103,8 +103,8 @@ export class Prompter {
         try {
             if (embedding.api === 'google')
                 this.embedding_model = new Gemini(embedding.model, embedding.url);
-            else if (embedding.api === 'openai')
-                this.embedding_model = new GPT(embedding.model, embedding.url);
+/*            else if (embedding.api === 'openai')
+                this.embedding_model = new GPT(embedding.model, embedding.url);*/
             else if (embedding.api === 'replicate')
                 this.embedding_model = new ReplicateAPI(embedding.model, embedding.url);
             else if (embedding.api === 'ollama')

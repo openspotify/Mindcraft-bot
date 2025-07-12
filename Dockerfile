@@ -15,9 +15,6 @@ RUN apt-get -y install tmux
 
 RUN git clone https://github.com/kolbytn/mindcraft.git /mindcraft
 WORKDIR /mindcraft
-COPY ./server_data.zip /mindcraft
-RUN unzip server_data.zip
-
 RUN npm install
 
 
@@ -46,6 +43,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip
 RUN ./aws/install
 
-VOLUME /data
-
 EXPOSE 8000
+
+CMD ["node", "main.js", "--profile", "andy.json"]
